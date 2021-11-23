@@ -17,13 +17,13 @@ def consulta_usuario():
 
 # Atualizar usuário
 def atualiza_usuario():
-    usuario = Usuarios.query.filter_by(id=2).first()
+    usuario = Usuarios.query.filter_by(id=1).first()
     usuario.nome = "Leia"
     usuario.save()
 
 # # Deletar usuário
 def remove_usuario():
-    usuario = Usuarios.query.filter_by(id=2).first()
+    usuario = Usuarios.query.filter_by(id=1).first()
     usuario.delete()
 
 if __name__ == '__main__':
