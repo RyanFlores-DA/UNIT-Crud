@@ -2,29 +2,29 @@ from models import Usuarios
 
 # Inserir usuário
 def insere_usuario():
-    pessoa = Usuarios(nome='Luke Skywallker', idade=150)
-    pessoa.save()
+    usuario = Usuarios(nome='Luke Skywallker', idade=150)
+    usuario.save()
 
 # Listar usuário
 def lista_usuario():
-    pessoas = Usuarios.query.all()
-    print(pessoas)
+    usuarios = Usuarios.query.all()
+    print(usuarios)
 
 # Consultar usuário
-def consulta_pessoa():
-    pessoa = Usuarios.query.filter_by(nome='Skywallker').first()
-    print(pessoa.id)
+def consulta_usuario():
+    usuario = Usuarios.query.filter_by(nome='Skywallker').first()
+    print(usuario.id)
 
 # Atualizar usuário
-def atualiza_pessoa():
-    pessoa = Usuarios.query.filter_by(id=2).first()
-    pessoa.nome = "Leia"
-    pessoa.save()
+def atualiza_usuario():
+    usuario = Usuarios.query.filter_by(id=2).first()
+    usuario.nome = "Leia"
+    usuario.save()
 
 # # Deletar usuário
-def remove_pessoa():
-    pessoa = Usuarios.query.filter_by(id=2).first()
-    pessoa.delete()
+def remove_usuario():
+    usuario = Usuarios.query.filter_by(id=2).first()
+    usuario.delete()
 
 if __name__ == '__main__':
      insere_usuario()
